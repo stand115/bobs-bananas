@@ -16,3 +16,11 @@ exports.determineBananaCost = date => {
     return 0.25;
   }
 };
+
+exports.monthRange = month => {
+  return Number(month) > 0 && Number(month) < 13;
+};
+
+exports.dayRange = day => {
+  return Number(day) > 0 && Number(day) < 32;
+};

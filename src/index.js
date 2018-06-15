@@ -21,6 +21,12 @@ app.get("/:month/:day/:year/:span", function(req, res) {
   // compare input date to now
   if (startDate < now) {
     res.status(400).json("Bob should not be budgeting for dates in the past..");
+  } else if (!util.monthRange(req.params.month)) {
+    // error handling for invalid month input
+    res.status(400).json("That's not a valid month Bob..");
+  } else if (!util.dayRange(req.params.day)) {
+    // error handling for invalid day input
+    res.status(400).json("That's not a valid day Bob..");
   } else {
     // iterate across all days in the span
     for (let i = 0; i < req.params.span; i++) {
