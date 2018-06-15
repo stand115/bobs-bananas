@@ -10,25 +10,33 @@ app.use(bodyParser.json());
 
 // capture the date + number of days data
 app.get("/:month/:day/:year/:span", function(req, res) {
+  let totalCost = 0;
   // format input for moment
   let startDate = moment(
     req.params.month + "/" + req.params.day + "/" + req.params.year,
     "MM/DD/YYYY"
   );
 
+  // iterate across all days in the span
   for (let i = 0; i < req.params.span; i++) {
-    console.log(
-      moment(startDate)
-        .add(i, "days")
-        .format("MM/DD/YYYY")
-    );
-    console.log(
-      moment(startDate)
-        .add(i, "days")
-        .format("dddd")
-    );
+    // check if the date is a weekday
+    if (
+      util.checkWorkDay(
+        moment(startDate)
+          .add(i, "days")
+          .format("dddd")
+      )
+    ) {
+      // if weekday is true, determine the price here and add to the total
+      totalCost += util.determineBananaCost(
+        moment(startDate)
+          .add(i, "days")
+          .format("MM/DD/YYYY")
+      );
+    }
   }
-  res.end();
+  // return the total cost from the request
+  res.json(totalCost);
 });
 
 app.listen(port, () => {
