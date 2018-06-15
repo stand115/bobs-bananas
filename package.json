@@ -1,0 +1,15 @@
+{
+  "name": "bobs-bananas",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js",
+    "lint": "eslint src"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "underscore": "^1.9.0"
+  }
+}
