@@ -14,3 +14,7 @@ Every day, Bob buys a banana from the same grocery store on his way to work. At 
 Bob wants a tool built that will allow him to budget properly for any span of time. All he should need to do is provide the date for the calculation to begin and how many days to calculate (including the beginning date), and the tool should tell him how much he’ll spend during that time.
 
 NOTE: Bob only buys bananas on his work days. You can assume he works a typical Monday-Friday work week.
+
+## Testing
+
+Test the api endpoint using postman or curl - http://localhost:4000/MM/DD/YYYY/NUMBER_OF_DAYS
