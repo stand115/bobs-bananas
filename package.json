@@ -12,7 +12,6 @@
     "chai-http": "^2.0.1"
   },
   "dependencies": {
-    "body-parser": "^1.18.1",
     "express": "^4.15.4",
     "moment": "^2.22.2",
     "underscore": "^1.9.0"

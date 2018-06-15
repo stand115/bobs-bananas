@@ -1,12 +1,9 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const moment = require("moment");
 const util = require("./utilities.js");
 
 const app = express();
 const port = 4000;
-
-app.use(bodyParser.json());
 
 // capture the date + number of days data
 app.get("/:month/:day/:year/:span", function(req, res) {
