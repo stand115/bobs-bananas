@@ -2,14 +2,16 @@
   "name": "bobs-bananas",
   "private": true,
   "scripts": {
-    "test": "jest",
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js",
     "lint": "eslint src"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
   "dependencies": {
     "body-parser": "^1.18.1",
     "express": "^4.15.4",
+    "moment": "^2.22.2",
     "underscore": "^1.9.0"
   }
 }
