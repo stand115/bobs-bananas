@@ -3,12 +3,13 @@
   "private": true,
   "scripts": {
     "start": "nodemon src/index.js",
-    "test": "mocha --bail --reporter nyan test/ServerSpec.js"
+    "test": "mocha --bail --reporter nyan test/tests.js"
   },
   "devDependencies": {
     "nodemon": "^1.12.1",
     "mocha": "^2.4.5",
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1"
   },
   "dependencies": {
     "body-parser": "^1.18.1",

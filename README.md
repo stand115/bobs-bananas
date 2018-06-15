@@ -15,6 +15,22 @@ Bob wants a tool built that will allow him to budget properly for any span of ti
 
 NOTE: Bob only buys bananas on his work days. You can assume he works a typical Monday-Friday work week.
 
+### Setup Environment
+
+```bash
+npm install
+```
+
+### Start the app
+
+```bash
+npm start
+```
+
 ## Testing
 
-Test the api endpoint using postman or curl - http://localhost:4000/MM/DD/YYYY/NUMBER_OF_DAYS
+Test the api endpoint using postman or curl - http://localhost:4000/MM/DD/YYYY/NUMBER_OF_DAYS or:
+
+```
+npm test
+```
