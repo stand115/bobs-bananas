@@ -27,7 +27,7 @@ app.get("/:month/:day/:year/:span", function(req, res) {
           .format("dddd")
       )
     ) {
-      // if weekday is true, determine the price here and add to the total
+      // if weekday is true, determine the price and add to the totalCost
       totalCost += util.determineBananaCost(
         moment(startDate)
           .add(i, "days")
@@ -36,7 +36,7 @@ app.get("/:month/:day/:year/:span", function(req, res) {
     }
   }
   // return the total cost from the request
-  res.json(totalCost);
+  res.json(totalCost.toFixed(2));
 });
 
 app.listen(port, () => {

@@ -3,10 +3,12 @@
   "private": true,
   "scripts": {
     "start": "nodemon src/index.js",
-    "lint": "eslint src"
+    "test": "mocha --bail --reporter nyan test/ServerSpec.js"
   },
   "devDependencies": {
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0"
   },
   "dependencies": {
     "body-parser": "^1.18.1",
